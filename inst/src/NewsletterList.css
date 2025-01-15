@@ -1,0 +1,149 @@
+/* Newsletter Container */
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Month Division */
+.newsletter-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center;
+  gap: 3px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+/* Month List Styling */
+.newsletter-list {
+  display: flex;
+  flex-wrap: wrap; /* Adjust for smaller screens */
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Item Styling */
+.newsletter-item {
+  margin: 0;
+}
+
+/* Button Styles */
+.newsletter-button {
+  font-size: 1em;
+  padding: 5px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Verdana", sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.newsletter-button:hover {
+  color: #555;
+  text-shadow: 0px 0px 3px rgba(85, 85, 85, 0.5);
+}
+
+/* Highlight Selected Month */
+.newsletter-button.selected {
+  color: #282c34;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+
+/* Small Screens (up to 480px) */
+@media (max-width: 480px) {
+  .newsletter-row {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .newsletter-button {
+    font-size: 0.9em;
+    padding: 3px;
+  }
+}
+
+/* Medium Screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .newsletter-row {
+    gap: 5px;
+  }
+
+  .newsletter-button {
+    font-size: 1em;
+  }
+}
+
+/* Large Screens (769px and up) */
+@media (min-width: 769px) {
+  .newsletter-row {
+    gap: 10px;
+  }
+
+  .newsletter-button {
+    font-size: 1.1em;
+  }
+}
+.pdf-viewer-container {
+  margin-top: 1em;
+  width: 100%;
+  max-width: 800px;
+  border: none; /* Remove unwanted borders */
+  background-color: #fff;
+}
+.pdf-viewer .rpv-core__toolbar {
+  background-color: #fff;
+  border: none; /* Remove unwanted borders */
+}
+
+/* Adjust toolbar buttons */
+.pdf-viewer .rpv-core__toolbar button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+}
+
+/* Sidebar background */
+.pdf-viewer .rpv-core__sidebar {
+  background-color: white;
+  border-right: none;
+}
+
+.pdf-viewer .rpv-core__viewer {
+  background-color: #fff;
+}
+
+.rpv-default-layout__toolbar {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid var(--rpv-default-layout__toolbar-border-bottom-color);
+  display: flex;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 2.5rem;
+  width: 100%;
+  z-index: 1;
+}
+.pdf-viewer-container .rpv-default-layout__sidebar {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background-color: white;
+}
+
+:root {
+  --rpv-default-layout__sidebar-headers-background-color: white !important;
+}
+
