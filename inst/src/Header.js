@@ -12,7 +12,7 @@ const Header = () => {
       }}
     >
       <img
-        src="/Instant.png"
+        src={process.env.PUBLIC_URL + "/Instant.png"}
         alt="Left Logo"
         style={{ height: "40px", marginBottom: "10px" }}
       />
@@ -20,7 +20,7 @@ const Header = () => {
         Newsletters
       </h1>
       <img
-        src="/XP logo.png"
+        src={process.env.PUBLIC_URL + "/XP logo.png"}
         alt="Right Logo"
         style={{ height: "60px", marginBottom: "10px" }}
       />

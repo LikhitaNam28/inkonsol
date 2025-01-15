@@ -31,7 +31,7 @@ const NewsletterList = ({ selectedYear, onMonthSelect }) => {
   const currentNewsletters = newsletters[selectedYear] || [];
 
   const handleFileSelection = (file) => {
-    setSelectedFile(`/newsletters/${selectedYear}/${file}`);
+    setSelectedFile(`${process.env.PUBLIC_URL}/newsletters/${selectedYear}/${file}`);
     setSelectedMonth(file); // Update the selected month
     if (onMonthSelect) {
       onMonthSelect(); // Notify parent when a file is selected
